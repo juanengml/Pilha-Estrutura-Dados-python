@@ -1,0 +1,35 @@
+[[package]]
+category = "main"
+description = "Better, prettier commandline logging."
+name = "console-logging"
+optional = false
+python-versions = "*"
+version = "0.0.5.0"
+
+[package.dependencies]
+termcolor = "*"
+
+[package.extras]
+dev = ["check-manifest"]
+test = ["coverage"]
+
+[[package]]
+category = "main"
+description = "ANSII Color formatting for output in terminal."
+name = "termcolor"
+optional = false
+python-versions = "*"
+version = "1.1.0"
+
+[metadata]
+content-hash = "7e3f1d633711436e1f459ad64f77bc2d7c01eedefd778a93748c2fa0cbf04005"
+python-versions = "^3.8"
+
+[metadata.files]
+console-logging = [
+    {file = "console-logging-0.0.5.0.tar.gz", hash = "sha256:112818db84663a194ca445ea17413f98fecbb979605951f6d232e6536a9b5263"},
+    {file = "console_logging-0.0.5.0-py2.py3-none-any.whl", hash = "sha256:f41a11667c200adefdf9a346a914aeb9d6b919915a0bbc3a69f88ecd3e72d8e0"},
+]
+termcolor = [
+    {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},
+]
