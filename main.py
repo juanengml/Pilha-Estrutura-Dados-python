@@ -1,5 +1,5 @@
 import random
-from EstruturaDados import Pilha
+from EstruturaDados import Pilha, Filas
 
 def main():
     pilha = Pilha()
@@ -13,6 +13,19 @@ def main():
 
     pilha.show()
 
+    fila = Filas()
+
+    [fila.insere(random.randint(10, 120)) for _ in range(0, 10)]
+        
+
+    fila.show()
+    fila.remove()
+    fila.remove()
+    fila.show()
+
+
+if __name__ == '__main__':
+    main()
 
 if __name__ == "__main__":
     main()
