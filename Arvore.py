@@ -85,4 +85,46 @@ def Organiza(my_list):
               
        except IndexError:
          pass
+
     return final_list
+
+
+def CountFrequency(my_list): 
+  
+    # Creating an empty dictionary  
+    freq = {} 
+    for item in my_list: 
+        if (item in freq): 
+            freq[item] += 1
+        else: 
+            freq[item] = 1
+    result = []
+    for key, value in freq.items(): 
+        data = "%s : %s"%(key, value)
+        result.append(data)
+    return result    
+
+
+def BuscadorATP3(raiz, keys, termo):
+  ordenar = []
+  result = {}
+  for chave in keys:
+    key = min(chave.keys())
+    resultado = busca(raiz, key)
+    ordenar.append(chave) if resultado else None
+  
+  valor = []
+  for arvore in Organiza(ordenar):
+    key, value = list(arvore.items())[0]
+    if key == termo:
+      [valor.append(item) for item in value]
+      result['termo_buscado'] = key
+    else:
+       None
+        
+  count = 0
+  print("Saida Arvore: ", valor)
+  result['processado'] = CountFrequency(valor)  
+  
+  return result
+    
